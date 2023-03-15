@@ -3,11 +3,14 @@ import PathTitle from '@/commen/PathTitle.vue'
 import router from '@/router'
 import { ref } from "vue";
 import { constPersonData } from '@/constData/constPersonData'
-const pathArray:Array<string> = router.currentRoute.value.fullPath.split('/').slice(1)
-const showSingleDateDetail = (index) => {
-
-}
+import SingleDataDetail from '@/commen/SingleDataDetail.vue'
+const pathArray: Array<string> = router.currentRoute.value.fullPath.split('/').slice(1)
 const singleDataDetail = ref({})
+const singleDataDetailModel = ref()
+const showSingleDateDetail = (index: number) => {
+    singleDataDetail.value = constPersonData[index]
+    singleDataDetailModel.value.openDialog()
+}
 </script>
 
 <template>
@@ -35,6 +38,7 @@ const singleDataDetail = ref({})
             <el-table-column prop="time" label="创建时间" width="150px" />
         </el-table>
     </div>
+    <SingleDataDetail ref="singleDataDetailModel" :singleDataDetail="singleDataDetail"/>
   </div>
 </template>
 
