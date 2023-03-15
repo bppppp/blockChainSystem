@@ -15,7 +15,7 @@ export const constPersonData:Array<PersonData> = [
         remark: '无',
         doctor: '李平',
         hospital: '浙江省X医院',
-        time: '',
+        time: '2023-3-15',
         ppl: '0',
     },
     {

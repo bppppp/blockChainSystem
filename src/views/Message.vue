@@ -55,9 +55,6 @@ const back2Login = () => {
         </div>
         <div className="message-right-content"><RouterView /></div>
     </div>
-    
-    <RouterLink to="/message/page2">page2</RouterLink>
-    <RouterLink to="/message/page3">page3</RouterLink>
   </header>
 </template>
 
