@@ -20,8 +20,8 @@ export const pathNameMap = new Map([
     ['message','首页'],
     ['dateHandle','医疗数据处理'],
     ['dataManagement','医疗数据管理'],
-    ['dataAuthorization','数据详情'],
-    ['dataDetail','数据授权'],
+    ['dataAuthorization','数据授权'],
+    ['dataDetail','数据详情'],
     ['dataShare','医疗数据共享']
 ])
 

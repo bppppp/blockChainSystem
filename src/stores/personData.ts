@@ -3,8 +3,8 @@ import { defineStore } from 'pinia'
 import type { PersonData } from '../type/personDataType'
 import { constPersonData } from '../constData/constPersonData'
 const buildpersonData = defineStore('personData', () => {
-  const personData = ref<Array<PersonData>>([...constPersonData])
-  const addPersonData = (singlePersonData:PersonData) => {
+  const personData = ref([...constPersonData])
+  const addPersonData = (singlePersonData:Record<string,string>) => {
     personData.value.push(singlePersonData);
   }
   return { personData,addPersonData }

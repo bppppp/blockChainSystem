@@ -19,20 +19,24 @@ const router = createRouter({
       children: [
         {
             path: 'dateHandle',
-            component: () => import('../components/dateHandle/DataHandle.vue')
+            component: () => import('../components/dataHandle/DataHandle.vue')
         },
         {
             path: 'dataDetail',
-            component: () => import('../components/dateManagement/DataDatail.vue')
+            component: () => import('../components/dataManagement/DataDatail.vue')
         },
         {
             path: 'dataAuthorization',
-            component: () => import('../components/dateManagement/DataAuthorization.vue')
+            component: () => import('../components/dataManagement/DataAuthorization.vue')
         },
         {
-            path: 'dateShare',
-            component: () => import('../components/dateShare/DataShare.vue')
+            path: 'dataShare',
+            component: () => import('../components/dataShare/DataShare.vue')
         },
+        {
+            path: 'authorizationDetail/:name',
+            component: () => import('../components/dataManagement/SingleDataAuthorization.vue')
+        }
       ]
     }
   ]

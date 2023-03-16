@@ -1,20 +1,9 @@
 <script setup lang="ts">
 import { defineProps, defineExpose } from 'vue';
 import { ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
-
+import {messageTitle} from '@/constData/constPersonData'
 const dialogVisible = ref(false)
 const props = defineProps(['singleDataDetail'])
-const handleClose = (done: () => void) => {
-  ElMessageBox.confirm('Are you sure to close this dialog?')
-    .then(() => {
-      done()
-    })
-    .catch(() => {
-      // catch error
-    })
-}
-console.log(props.singleDataDetail)
 const openDialog = () => {
   dialogVisible.value = true
 }
@@ -25,19 +14,19 @@ defineExpose({openDialog})
   <el-dialog
     v-model="dialogVisible"
     title="数据详情"
-    width="50%"
-    :before-close="handleClose"
+    width="800px"
   >
-    <span>
-      <el-descriptions :column="2">
-        <el-descriptions-item v-for="(item,key) in props.singleDataDetail" :label="key">{{item}}</el-descriptions-item>
-      </el-descriptions>
+    <span className="single-data-detail-box">
+      <div v-for="(item,key) in props.singleDataDetail" className="single-data-detail-tip">
+        <span className="mr-10 single-data-detail-title">{{ messageTitle[key] }}:</span>
+        <span>{{ item }}</span>
+      </div>
     </span>
     <template #footer>
       <span class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
+        <el-button @click="dialogVisible = false">取消</el-button>
         <el-button type="primary" @click="dialogVisible = false">
-          Confirm
+          确认
         </el-button>
       </span>
     </template>
@@ -45,5 +34,20 @@ defineExpose({openDialog})
 </template>
 
 <style scoped>
-
+.single-data-detail-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.single-data-detail-tip {
+    min-width: 350px;
+    margin-left: 50px;
+    overflow-wrap: normal;
+    margin-top: 10px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.single-data-detail-title {
+    font-weight: 700;
+}
 </style>

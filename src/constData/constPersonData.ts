@@ -1,5 +1,5 @@
 import type { PersonData } from '../type/personDataType'
-export const constPersonData:Array<PersonData> = [
+export const constPersonData:Array<Record<string,string>> = [
     {
         name: '张三',
         sex: '男',
@@ -10,7 +10,7 @@ export const constPersonData:Array<PersonData> = [
         city: '杭州市',
         address: '宏景路23号',
         malady: '感冒',
-        result: '白细胞、中性粒细胞升高明显，C反应蛋白升高，血清淀粉样蛋白增高。为细菌感染导致的感冒',
+        result: '白细胞、中性粒细胞升高明显，C反应蛋白升高，血清淀粉样蛋白增高。为细菌感染导致的感冒。',
         advice: '建议多饮水、服药期间忌饮酒，注意休息',
         remark: '无',
         doctor: '李平',
@@ -33,7 +33,7 @@ export const constPersonData:Array<PersonData> = [
         remark: '无',
         doctor: '陈浩',
         hospital: '浙江省X医院',
-        time: '',
+        time: '2023-3-15',
         ppl: '0',
     },
     {
@@ -51,7 +51,7 @@ export const constPersonData:Array<PersonData> = [
         remark: '无',
         doctor: '陈浩',
         hospital: '浙江省X医院',
-        time: '',
+        time: '2023-3-15',
         ppl: '0',
     },
     {
@@ -69,7 +69,7 @@ export const constPersonData:Array<PersonData> = [
         remark: '无',
         doctor: '姜楠',
         hospital: '江苏省Y医院',
-        time: '',
+        time: '2023-3-15',
         ppl: '0',
     },
     {
@@ -87,7 +87,7 @@ export const constPersonData:Array<PersonData> = [
         remark: '无',
         doctor: '陆海莹',
         hospital: '江苏省Y医院',
-        time: '',
+        time: '2023-3-15',
         ppl: '0',
     },
     {
@@ -105,7 +105,141 @@ export const constPersonData:Array<PersonData> = [
         remark: '无',
         doctor: '杨懿',
         hospital: '广东省X医院',
-        time: '',
+        time: '2023-3-15',
         ppl: '0',
     }
 ]
+
+
+export const messageTitle =  {
+    name: '姓名',
+    sex: '性别',
+    age: '年龄',
+    phoneNumber: '联系方式',
+    id: '身份证',
+    province: '省份',
+    city: '城市',
+    address: '地址',
+    malady: '病因',
+    result: '诊断结果',
+    advice: '医生建议',
+    remark: '备注',
+    doctor: '就诊医生',
+    hospital: '就诊医院',
+    time: '时间',
+    ppl: 'ppl等级',
+} as Record<string,string>
+
+export const addPagemessageTitle =  {
+    name: '姓名',
+    sex: '性别',
+    age: '年龄',
+    phoneNumber: '联系方式',
+    id: '身份证',
+    province: '省份',
+    city: '城市',
+    address: '地址',
+    malady: '病因',
+    result: '诊断结果',
+    advice: '医生建议',
+    remark: '备注',
+    doctor: '就诊医生',
+    hospital: '就诊医院',
+} as Record<string,string>
+
+export const PPLLeve = [
+    {
+        value: '0',
+        label: '0'
+    },
+    {
+        value: '1',
+        label: '1'
+    },
+    {
+        value: '2',
+        label: '2'
+    },
+    {
+        value: '3',
+        label: '3'
+    },
+    {
+        value: '4',
+        label: '4'
+    },
+]
+
+export const anonymousPersonDatas = [
+    {
+        age: '[16,18]',
+        sex: '男',
+        id: '991***************',
+        address: '浙江省',
+        malady: '流感'
+    },
+    {
+        age: '[16,18]',
+        sex: '男',
+        id: '991***************',
+        address: '浙江省',
+        malady: '疟疾'
+    },
+    {
+        age: '[16,18]',
+        sex: '男',
+        id: '991***************',
+        address: '浙江省',
+        malady: '胃溃疡'
+    },
+    {
+        age: '[25,29]',
+        sex: '女',
+        id: '880***************',
+        address: '上海市',
+        malady: '流感'
+    },
+    {
+        age: '[25,29]',
+        sex: '女',
+        id: '880***************',
+        address: '上海市',
+        malady: '*'
+    },
+    {
+        age: '[25,29]',
+        sex: '女',
+        id: '880***************',
+        address: '上海市',
+        malady: '新冠肺炎'
+    },
+    {
+        age: '[32,37]',
+        sex: '*',
+        id: '758***************',
+        address: '江苏省苏州市吴江区',
+        malady: '胰腺炎'
+    },
+    {
+        age: '[32,37]',
+        sex: '*',
+        id: '758***************',
+        address: '江苏省苏州市吴江区',
+        malady: '流感'
+    },
+    {
+        age: '[32,37]',
+        sex: '*',
+        id: '758***************',
+        address: '江苏省苏州市吴江区',
+        malady: '*'
+    },
+    {
+        age: '[32,37]',
+        sex: '*',
+        id: '758***************',
+        address: '江苏省苏州市吴江区',
+        malady: '高血压'
+    },
+    
+] as Array<Record<string,string>>

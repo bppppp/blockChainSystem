@@ -46,7 +46,7 @@ const back2Login = () => {
                             <el-menu-item index="dataAuthorization" @click="() => jump2CorrespondingPage('dataAuthorization')">数据授权</el-menu-item>
                         </el-menu-item-group>
                     </el-sub-menu>
-                    <el-menu-item index="dateShare" @click="() => jump2CorrespondingPage('dateShare')">
+                    <el-menu-item index="dateShare" @click="() => jump2CorrespondingPage('dataShare')">
                         <el-icon><document  /></el-icon>
                         <span className="mr-8">医疗数据共享</span>
                     </el-menu-item>
